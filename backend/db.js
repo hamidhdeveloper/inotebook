@@ -1,5 +1,6 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
-const db = "mongodb+srv://root:root@cluster0.tsykr.mongodb.net/inotebook?retryWrites=true&w=majority";
+const db = process.env.DB_LINK;
 
 mongoose.connect(db,{ 
     useNewUrlParser: true ,
